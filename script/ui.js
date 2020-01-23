@@ -19,10 +19,10 @@ class UI {
     this.string.textContent = weather.temperature+'℃';
     this.icon.setAttribute('src', weather.weather_icons);
 
-    this.humidity.textContent = `Relative Humidity: ${weather.humidity}`
-    this.feelsLike.textContent = `Feels Like: ${weather.feelslike}`
-    this.windSpeed.textContent = `Wind Speed: ${weather.wind_speed}`
-    this.windDirection.textContent = `Wind Direction: ${weather.wind_dir}`
+    this.humidity.textContent = `Relative Humidity: ${weather.humidity}%`
+    this.feelsLike.textContent = `Feels Like: ${weather.feelslike}℃`
+    this.windSpeed.textContent = `Wind Speed: ${weather.wind_speed} MPH`
+    this.windDirection.textContent = `Wind Direction: From ${weather.wind_dir}`
     this.uvIndex.textContent = `UV Index: ${weather.uv_index}`
   }
 }
