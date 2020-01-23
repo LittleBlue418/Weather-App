@@ -1,6 +1,13 @@
+// Initialise storage
+const storage = new Storage();
+
+// get location data
+const weatherLocation = storage.getLocationData();
+
 // initialize weather object
-const weather = new Weather('stockholm');
+const weather = new Weather(weatherLocation.city);
 const ui = new UI();
+
 
 // Get weather on DOM load
 document.addEventListener('DOMContentLoaded', getWeather)
@@ -14,6 +21,9 @@ document.getElementById('w-change-btn').addEventListener('click', (e) => {
 
   // Get and display weather
   getWeather();
+
+  // Set local storage
+  storage.setLocationData(city)
 
   // Close modal
   $('#locModal').modal('hide');
